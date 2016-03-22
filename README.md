@@ -22,7 +22,7 @@ pod "MakeColor"
 
 ## Author
 
-Matthew Catellier, mattcatellier@gmail.coml
+Matthew Catellier, Cheng Jiang
 
 ## License
 
