@@ -22,8 +22,4 @@ pod "MakeColor"
 
 ## Author
 
-Matthew Catellier, Cheng Jiang
-
-## License
-
-MakeColor is available under the MIT license. See the LICENSE file for more info.
+Matt Catellier, Cheng Jiang
