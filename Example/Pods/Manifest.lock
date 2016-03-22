@@ -1,0 +1,14 @@
+PODS:
+  - MakeColor (0.1.0)
+
+DEPENDENCIES:
+  - MakeColor (from `../`)
+
+EXTERNAL SOURCES:
+  MakeColor:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MakeColor: 53ba932928b3c8b5d32948121ca70e42831f782a
+
+COCOAPODS: 0.39.0

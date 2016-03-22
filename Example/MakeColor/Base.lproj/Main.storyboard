@@ -1,25 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MakeColor_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlT-Ch-t4W" userLabel="Color One">
+                                <rect key="frame" x="40" y="186" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmn-ES-TJO" userLabel="MakeColor">
+                                <rect key="frame" x="51" y="232" width="74" height="30"/>
+                                <state key="normal" title="MakeColor"/>
+                                <connections>
+                                    <action selector="mkColorBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wci-sK-a0Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b07-Bc-LyP" userLabel="MakeGradient">
+                                <rect key="frame" x="210" y="232" width="96" height="30"/>
+                                <state key="normal" title="MakeGradient"/>
+                                <connections>
+                                    <action selector="mkGradientBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F5i-lj-vHH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter in hex values.  i.e. ff0000 and 0000ff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKK-3o-fZA">
+                                <rect key="frame" x="40" y="88" width="326" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Make gradient requires 2 colors and can only be run once" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9Z-F2-VJd">
+                                <rect key="frame" x="38" y="117" width="328" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MakeColor Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkT-DD-bJI">
+                                <rect key="frame" x="38" y="28" width="162" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3eh-EQ-IAX" userLabel="Color Two">
+                                <rect key="frame" x="209" y="186" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N9Z-F2-VJd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="18" id="1xF-GE-ler"/>
+                            <constraint firstItem="oKK-3o-fZA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="2Ku-UX-6uL"/>
+                            <constraint firstItem="tmn-ES-TJO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="31" id="5Lk-8u-ytz"/>
+                            <constraint firstItem="dlT-Ch-t4W" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="7Uw-NY-6VJ"/>
+                            <constraint firstItem="dlT-Ch-t4W" firstAttribute="top" secondItem="N9Z-F2-VJd" secondAttribute="bottom" constant="22" id="Ba7-L2-bGt"/>
+                            <constraint firstItem="b07-Bc-LyP" firstAttribute="leading" secondItem="tmn-ES-TJO" secondAttribute="trailing" constant="85" id="CY4-9t-MUF"/>
+                            <constraint firstItem="b07-Bc-LyP" firstAttribute="top" secondItem="3eh-EQ-IAX" secondAttribute="bottom" constant="16" id="Cqa-cZ-4Y1"/>
+                            <constraint firstItem="N9Z-F2-VJd" firstAttribute="top" secondItem="oKK-3o-fZA" secondAttribute="bottom" constant="8" id="aJM-S4-40v"/>
+                            <constraint firstItem="3eh-EQ-IAX" firstAttribute="leading" secondItem="dlT-Ch-t4W" secondAttribute="trailing" constant="72" id="t7T-WO-CvO"/>
+                            <constraint firstItem="oKK-3o-fZA" firstAttribute="top" secondItem="gkT-DD-bJI" secondAttribute="bottom" constant="28" id="t8M-8X-2hT"/>
+                            <constraint firstItem="tmn-ES-TJO" firstAttribute="top" secondItem="dlT-Ch-t4W" secondAttribute="bottom" constant="16" id="tFV-Cl-orY"/>
+                            <constraint firstItem="gkT-DD-bJI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="18" id="w8T-Uy-txJ"/>
+                            <constraint firstItem="3eh-EQ-IAX" firstAttribute="top" secondItem="N9Z-F2-VJd" secondAttribute="bottom" constant="22" id="xIX-fD-zD2"/>
+                            <constraint firstItem="gkT-DD-bJI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="xbs-Wr-YMW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorOne" destination="dlT-Ch-t4W" id="zlz-IP-dmU"/>
+                        <outlet property="colorTwo" destination="3eh-EQ-IAX" id="PO2-p8-4kI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="243" y="324"/>
         </scene>
     </scenes>
 </document>

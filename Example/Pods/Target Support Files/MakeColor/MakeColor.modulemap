@@ -1,0 +1,6 @@
+framework module MakeColor {
+  umbrella header "MakeColor-umbrella.h"
+
+  export *
+  module * { export * }
+}
